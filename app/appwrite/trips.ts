@@ -22,7 +22,7 @@ export const getAllTrips = async (limit: number, offset: number) => {
 export const getTripById = async (tripId: string) => {
     const trip = await database.getDocument(
         appwriteConfig.databaseId,
-        // appwriteConfig.tripCollectionId,
+        appwriteConfig.tripCollectionId,
         tripId
     );
 
